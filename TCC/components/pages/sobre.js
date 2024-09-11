@@ -15,7 +15,7 @@ export default function Sobre() {
     if (page === 'sobre') {
         return (
             <View style={styles.container}>
-                <Image style={styles.usuario} source={require("./img/user.png")} />
+                <Image style={styles.usuario} source={require("../img/Vector.png")} />
                 <Text style={styles.title}>Faça seu <Text style={styles.spam}>Login</Text></Text>
                 <Text style={styles.label}>Usuário:</Text>
                 <TextInput
@@ -54,18 +54,19 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#f2f0dd',
+        backgroundColor: '#2c140a',
         padding: 150,
+
     },
     title: {
         fontSize: 28,
         fontWeight: 'bold',
-        color: '#000',
+        color: '#fff',
         marginBottom: 16,
         textAlign: 'center',
     },
     button: {
-        backgroundColor: '#003818',
+        backgroundColor: '#fff',
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderRadius: 4,
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     },
     button2: {
         backgroundColor: 'transparent',
-        borderColor: '#003818',
+        borderColor: '#fff',
         borderWidth: 1,
         paddingVertical: 10,
         paddingHorizontal: 20,
@@ -85,37 +86,39 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
     },
     buttonText: {
-        color: '#003818',
+        color: '#fff',
         fontSize: 16,
         fontWeight: 'bold',
         textAlign: 'center',
  
     },
     buttonText2: {
-        color: '#fff',
+        color: '#2c140a',
         fontSize: 16,
         fontWeight: 'bold',
         textAlign: 'center',
     },
    
     usuario: {
-        width: 250,
-        height: 250,
+        width: 200,
+        height: 200,
         marginTop: -90,
         marginBottom: 20,
  
     },
     label: {
         marginBottom: 8,
-        fontSize: 16,
+        fontSize: 18,
+        color: '#fff'
     },
     input: {
         width: '100%',
-        borderColor: 'gray',
+        borderColor: 'white',
         borderWidth: 1,
         marginBottom: 50,
         paddingHorizontal: 8,
         borderRadius: 4,
+        color: 'gray',
     },
     lado: {
         flexDirection: 'row',
@@ -123,6 +126,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     spam: {
-        color: '#003517',
+        color: '#fff',
     },
 });

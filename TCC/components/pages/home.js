@@ -1,6 +1,6 @@
 import React from "react";
 import {Image, Text, View , StyleSheet, TouchableOpacity, ImageBackground} from 'react-native';
-//import Sobre from "./sobre";
+import Sobre from "./sobre";
 
 
 export default function App() {
