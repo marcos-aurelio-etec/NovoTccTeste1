@@ -13,7 +13,12 @@ export default function Principal() {
             return (
 
                 <><><View style={styles.header}>
+                    <Image 
+                                source={{ uri: 'https://picsum.photos/200/300' }}
+                                style={{ width: 100, height: 100, borderRadius: 100 }} />
                     <Text style={styles.headerText}>Barbearia Franco</Text>
+                    
+                    
 
                 </View><View style={styles.container}>
                         <View style={styles.container}>
@@ -23,13 +28,13 @@ export default function Principal() {
                         <View style={styles.fotos}>
                             <Image
                                 source={{ uri: 'https://picsum.photos/200/300' }}
-                                style={{ width: 100, height: 100 }} />
+                                style={{ width: 100, height: 100, borderRadius: 100 }} />
                             <Image
                                 source={{ uri: 'https://picsum.photos/200/301' }}
-                                style={{ width: 100, height: 100 }} />
+                                style={{ width: 100, height: 100, borderRadius: 100}} />
                             <Image
                                 source={{ uri: 'https://picsum.photos/200/302' }}
-                                style={{ width: 100, height: 100 }} />
+                                style={{ width: 100, height: 100, borderRadius: 100 }} />
 
                         </View> 
 
@@ -57,6 +62,8 @@ export default function Principal() {
                                     style={{ width: 100, height: 100 }} />
                             </View>
 
+                            
+
                         </View></></>
                     
 
@@ -74,13 +81,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#f2f0dd',
         flex: 1,
-        marginBottom: 150,
+        marginBottom: 200,
+        borderColor: 'black',
+       
 
     },
     title: {
         fontSize: 30,
         fontWeight: 'bold',
-        color: 'red',
+        color: 'black',
         marginBottom: 150, // Margem abaixo do texto superior
 
 
@@ -120,6 +129,7 @@ const styles = StyleSheet.create({
         padding: 16,
         width: 390,
         marginTop: 50,
+        
 
 
     },

@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         paddingHorizontal: 8,
         borderRadius: 4,
-        color: 'gray',
+        color: 'white',
     },
     lado: {
         flexDirection: 'row',
