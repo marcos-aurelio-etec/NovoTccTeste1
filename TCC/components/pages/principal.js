@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, Text, View, StyleSheet, TouchableOpacity, } from 'react-native';
+import { Image, Text, View, StyleSheet, TouchableOpacity, ScrollView, } from 'react-native';
 import Sobre from "./sobre";
 import Home from "./home";
 
@@ -11,12 +11,15 @@ export default function Principal() {
     const renderPage = () => {
         if (page === 'principal') {
             return (
-
-                <><><View style={styles.header}>
+                <ScrollView contentContainerStyle={styles.scrollContainer}>
+                <><>< View style={styles.header}>
+                    
+      
                     <Image 
                                 source={{ uri: 'https://picsum.photos/200/300' }}
                                 style={{ width: 100, height: 100, borderRadius: 100 }} />
                     <Text style={styles.headerText}>Barbearia Franco</Text>
+                   
                     
                     
 
@@ -28,13 +31,13 @@ export default function Principal() {
                         <View style={styles.fotos}>
                             <Image
                                 source={{ uri: 'https://picsum.photos/200/300' }}
-                                style={{ width: 100, height: 100, borderRadius: 100 }} />
+                                style={{ width: 100, height: 100, }} />
                             <Image
                                 source={{ uri: 'https://picsum.photos/200/301' }}
-                                style={{ width: 100, height: 100, borderRadius: 100}} />
+                                style={{ width: 100, height: 100, }} />
                             <Image
                                 source={{ uri: 'https://picsum.photos/200/302' }}
-                                style={{ width: 100, height: 100, borderRadius: 100 }} />
+                                style={{ width: 100, height: 100,  }} />
 
                         </View> 
 
@@ -42,40 +45,90 @@ export default function Principal() {
                              <Text style={styles.buttonText2}>Entrar</Text>
                              </TouchableOpacity>
 
-                    </View></><><View style={styles.header}>
-                        <Text style={styles.headerText}>Barbearia Franco</Text>
+                             <Image 
+                                source={{ uri: 'https://picsum.photos/200/300' }}
+                                style={{ width: 100, height: 100, borderRadius: 100 }} />
+                    <Text style={styles.headerText}>Barbearia Franco</Text>
+                   
+                    
+                    
 
-                    </View><View style={styles.container}>
-                            <View style={styles.container}>
-                                <View style={styles.content}>
-                                </View>
+                </View><View style={styles.container}>
+                        <View style={styles.container}>
+                            <View style={styles.content}>
                             </View>
-                            <View style={styles.fotos}>
-                                <Image
-                                    source={{ uri: 'https://picsum.photos/200/300' }}
-                                    style={{ width: 100, height: 100 }} />
-                                <Image
-                                    source={{ uri: 'https://picsum.photos/200/301' }}
-                                    style={{ width: 100, height: 100 }} />
-                                <Image
-                                    source={{ uri: 'https://picsum.photos/200/302' }}
-                                    style={{ width: 100, height: 100 }} />
+                        </View>
+                        <View style={styles.fotos}>
+                            <Image
+                                source={{ uri: 'https://picsum.photos/200/300' }}
+                                style={{ width: 100, height: 100, }} />
+                            <Image
+                                source={{ uri: 'https://picsum.photos/200/301' }}
+                                style={{ width: 100, height: 100, }} />
+                            <Image
+                                source={{ uri: 'https://picsum.photos/200/302' }}
+                                style={{ width: 100, height: 100,  }} />
+
+                        </View> 
+
+                        <TouchableOpacity style={styles.button} onPress={() => setPage('barbearia1')}>
+                             <Text style={styles.buttonText2}>Entrar</Text>
+                             </TouchableOpacity>
+
+                             <Image 
+                                source={{ uri: 'https://picsum.photos/200/300' }}
+                                style={{ width: 100, height: 100, borderRadius: 100 }} />
+                    <Text style={styles.headerText}>Barbearia Franco</Text>
+                   
+                    
+                    
+
+                </View><View style={styles.container}>
+                        <View style={styles.container}>
+                            <View style={styles.content}>
                             </View>
+                        </View>
+                        <View style={styles.fotos}>
+                            <Image
+                                source={{ uri: 'https://picsum.photos/200/300' }}
+                                style={{ width: 100, height: 100, }} />
+                            <Image
+                                source={{ uri: 'https://picsum.photos/200/301' }}
+                                style={{ width: 100, height: 100, }} />
+                            <Image
+                                source={{ uri: 'https://picsum.photos/200/302' }}
+                                style={{ width: 100, height: 100,  }} />
+
+                        </View> 
+
+                        <TouchableOpacity style={styles.button} onPress={() => setPage('barbearia1')}>
+                             <Text style={styles.buttonText2}>Entrar</Text>
+                             </TouchableOpacity>
+
+                    
 
                             
 
                         </View></></>
-                    
+                    </ScrollView>
 
             );
         } else if (page === 'home') {
             return <Home />;
         }
     };
+
     return <View style={styles.container}>{renderPage()}</View>;
 }
 
 const styles = StyleSheet.create({
+    scrollContainer: {
+        marginTop: 'auto',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 1,
+        width: '100%',
+    },
     container: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -83,7 +136,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginBottom: 200,
         borderColor: 'black',
-       
+        width: '100%',
 
     },
     title: {
@@ -99,8 +152,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#003818',
         padding: 10,
         borderRadius: 5,
-        marginBottom: 50, // Margem abaixo do texto superior
-        marginTop: 0,
+        marginTop: 20,
     },
     buttonText: {
         color: '#FFFFFF',
@@ -120,15 +172,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         backgroundColor: 'red',
-
-
+        width: '100%',
     },
 
     header: {
         backgroundColor: 'red',
         padding: 16,
-        width: 390,
-        marginTop: 50,
+        width: '100%',
+        alignItems: 'center'
         
 
 
@@ -136,11 +187,14 @@ const styles = StyleSheet.create({
     headerText: {
         fontSize: 18,
         fontWeight: 'bold',
+        color: '#fff',
+        marginTop: 8,
 
     },
     content: {
         flex: 1,
         padding: 16,
+        width: '100%',
     },
     fotos: {
         flexDirection: 'row',
@@ -148,7 +202,9 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 200,
         backgroundColor: '#f2f2f2',
-        padding: 45,
-        marginTop: 100,
+        padding: 10,
+        marginTop: 20,
+        justifyContent: 'space-around',
     },
+
 });
