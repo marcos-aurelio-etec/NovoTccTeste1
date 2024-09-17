@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Text, View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
-import Home from "./home";
+import Home from "./barbearia1";
 
 export default function Principal() {
     const [page, setPage] = React.useState('principal');
